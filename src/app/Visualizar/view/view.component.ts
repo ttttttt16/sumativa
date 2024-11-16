@@ -10,6 +10,9 @@ import { Component, Input, OnChanges } from '@angular/core';
 export class ViewComponent {
   @Input() colorChange: boolean = false; // Propiedad para cambiar el color
   @Input() move: boolean = false; // Propiedad para controlar el movimiento
+  @Input() password: string = ''; // Para recibir el valor de la contraseña
+  @Input() email: string = ''; // Para recibir el valor del email
+  @Input() text: string = ''; // Para recibir el valor del texto
   color: string = 'blue'; // Color inicial
   position: number = 0; // Inicializa la posición
 
@@ -21,7 +24,7 @@ export class ViewComponent {
       this.moveBox(); // Mueve la caja si se recibe el evento
     }
   }
-  
+
 
   changeColor() {
     this.color = this.color === 'blue' ? 'red' : 'blue'; // Cambia entre dos colores

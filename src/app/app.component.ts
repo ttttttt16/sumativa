@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { SumativavisualComponent } from './Components/sumativavisual/sumativavisual.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
