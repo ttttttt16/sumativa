@@ -1,0 +1,29 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F9F9F9;
+    /* Color de fondo suave */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    /* Color del texto */
+}
+
+h1,
+h2,
+h3 {
+    color: #FFC0CB;
+    /* Rosado suave para encabezados */
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+    /* Efecto de hover */
+}

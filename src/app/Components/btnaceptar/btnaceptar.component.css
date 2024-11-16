@@ -1,11 +1,12 @@
-/* Estilos para el botón Aceptar */
 button {
-    background-color: green;
-    /* Color de fondo */
+    background-color: #FFD700;
+    /* Dorado suave */
     color: white;
     /* Color del texto */
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #FFC0CB;
+    /* Cambiar a rosado suave al pasar el mouse */
 }

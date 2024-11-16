@@ -21,6 +21,7 @@ export class ViewComponent {
       this.moveBox(); // Mueve la caja si se recibe el evento
     }
   }
+  
 
   changeColor() {
     this.color = this.color === 'blue' ? 'red' : 'blue'; // Cambia entre dos colores

@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-btncancelar',
   standalone: true,
   imports: [],
   templateUrl: './btncancelar.component.html',
-  styleUrl: './btncancelar.component.css'
+  styleUrls: ['./btncancelar.component.css']
 })
 export class BtncancelarComponent {
 

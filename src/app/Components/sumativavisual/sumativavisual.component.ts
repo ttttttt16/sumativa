@@ -13,6 +13,8 @@ import { BtnsecundarioComponent } from '../btnsecundario/btnsecundario.component
 export class SumativavisualComponent {
   colorChange: boolean = false; // Variable para controlar el cambio de color
   move: boolean = false; // Variable para controlar el movimiento
+  showMessage: boolean = false;
+
 
   onColorButtonClick() {
     this.colorChange = !this.colorChange; // Cambia el estado de color
@@ -20,5 +22,13 @@ export class SumativavisualComponent {
 
   onMoveButtonClick() {
     this.move = !this.move; // Cambia el estado de movimiento
+  }
+
+  onAccept() {
+    this.showMessage = true;
+  }
+
+  onCancel() {
+    this.showMessage = false;
   }
 }

@@ -4,3 +4,13 @@
     transition: background-color 0.5s, transform 0.5s;
     /* Añade la transición para el movimiento y el color */
 }
+
+:host {
+    display: block;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #E6E6FA;
+    /* Lila claro */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
