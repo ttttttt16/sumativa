@@ -7,12 +7,12 @@ import { ViewComponent } from '../../Visualizar/view/view.component';
   standalone: true,
   imports: [BtnprimarioComponent, ViewComponent],
   templateUrl: './sumativavisual.component.html',
-  styleUrl: './sumativavisual.component.css'
+  styleUrls: ['./sumativavisual.component.css']
 })
 export class SumativavisualComponent {
   colorChange: boolean = false;
 
   onButtonClick() {
-    this.colorChange = !this.colorChange; // Cambia el estado para indicar que se debe cambiar el color
+    this.colorChange = !this.colorChange;
   }
 }

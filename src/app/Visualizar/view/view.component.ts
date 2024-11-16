@@ -1,10 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-view',
   standalone: true,
-  imports: [BrowserModule],
+  imports: [],
   templateUrl: './view.component.html',
   styleUrl: './view.component.css'
 })

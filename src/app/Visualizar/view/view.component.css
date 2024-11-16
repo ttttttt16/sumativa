@@ -1,5 +1,6 @@
 .color-box {
     width: 100px;
+    /* Asegúrate de que tenga tamaño */
     height: 100px;
     transition: background-color 0.5s;
     /* Animación suave */
