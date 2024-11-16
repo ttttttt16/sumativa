@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-btnprimario',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './btnprimario.component.css'
 })
 export class BtnprimarioComponent {
+  @Output() buttonClick = new EventEmitter<void>();
 
+  onClick() {
+    this.buttonClick.emit();
+  }
 }
