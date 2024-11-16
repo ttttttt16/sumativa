@@ -1,18 +1,15 @@
 import { Component, Input, OnChanges } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-view',
   standalone: true,
-  imports: [BrowserModule],
+  imports: [],
   templateUrl: './view.component.html',
   styleUrl: './view.component.css'
 })
 export class ViewComponent {
   @Input() colorChange: boolean = false; // Propiedad para cambiar el color
   @Input() move: boolean = false; // Propiedad para controlar el movimiento
-  @Input() showMessage: boolean = false; // Propiedad para mostrar el mensaje
-  message: string = ''; // Mensaje a mostrar
   color: string = 'blue'; // Color inicial
   position: number = 0; // Inicializa la posición
 
@@ -23,9 +20,6 @@ export class ViewComponent {
     if (this.move) {
       this.moveBox(); // Mueve la caja si se recibe el evento
     }
-    if (this.showMessage) {
-      this.displayMessage(); // Muestra el mensaje si se recibe el evento
-    }
   }
 
   changeColor() {
@@ -34,9 +28,5 @@ export class ViewComponent {
 
   moveBox() {
     this.position += 10; // Incrementa la posición para mover la caja
-  }
-
-  displayMessage() {
-    this.message = '¡Acción aceptada!'; // Mensaje a mostrar
   }
 }
