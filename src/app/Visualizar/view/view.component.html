@@ -1,1 +1,2 @@
 <div class="color-box" [style.background-color]="color" [style.transform]="'translateX(' + position + 'px)'"></div>
+<div *ngIf="message">{{ message }}</div> <!-- Muestra el mensaje si existe -->

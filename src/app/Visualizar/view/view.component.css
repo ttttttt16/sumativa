@@ -4,3 +4,10 @@
     transition: background-color 0.5s, transform 0.5s;
     /* Añade la transición para el movimiento y el color */
 }
+
+div {
+    margin-top: 10px;
+    font-size: 18px;
+    color: blue;
+    /* Color del mensaje */
+}

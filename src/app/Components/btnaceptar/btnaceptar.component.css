@@ -1,0 +1,11 @@
+/* Estilos para el botón Aceptar */
+button {
+    background-color: green;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
