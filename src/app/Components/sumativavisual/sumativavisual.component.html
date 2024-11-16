@@ -1,2 +1,3 @@
-<app-btnprimario (buttonClick)="onButtonClick()"></app-btnprimario>
-<app-view [colorChange]="colorChange"></app-view>
+<app-btnprimario (buttonClick)="onColorButtonClick()"></app-btnprimario>
+<app-btnsecundario (moveEvent)="onMoveButtonClick()"></app-btnsecundario>
+<app-view [colorChange]="colorChange" [move]="move"></app-view>

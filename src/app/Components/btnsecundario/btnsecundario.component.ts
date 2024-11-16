@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-btnsecundario',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './btnsecundario.component.css'
 })
 export class BtnsecundarioComponent {
+  @Output() moveEvent = new EventEmitter<void>();
 
+  onClick() {
+    this.moveEvent.emit(); // Emite el evento al hacer clic
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-btnprimario',
@@ -11,6 +11,6 @@ export class BtnprimarioComponent {
   @Output() buttonClick = new EventEmitter<void>();
 
   onClick() {
-    this.buttonClick.emit();
+    this.buttonClick.emit(); // Emite el evento al hacer clic
   }
 }
