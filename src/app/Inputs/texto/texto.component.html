@@ -1,1 +1,6 @@
-<p>texto works!</p>
+<div>
+    <label for="texto">Texto:</label>
+    <input type="text" id="texto" [(ngModel)]="texto" (ngModelChange)="validateTexto()" required />
+    <div *ngIf="!isValid && texto.length > 0" style="color: red;">El texto no puede estar vacío y solo puede contener
+        letras y números.</div>
+</div>

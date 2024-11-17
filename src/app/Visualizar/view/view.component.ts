@@ -12,7 +12,7 @@ export class ViewComponent {
   @Input() move: boolean = false; // Propiedad para controlar el movimiento
   @Input() password: string = ''; // Para recibir el valor de la contraseña
   @Input() email: string = ''; // Para recibir el valor del email
-  @Input() text: string = ''; // Para recibir el valor del texto
+  @Input() texto: string = ''; // Para recibir el valor del texto
   color: string = 'blue'; // Color inicial
   position: number = 0; // Inicializa la posición
 

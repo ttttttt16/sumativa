@@ -3,11 +3,12 @@ import { BtnprimarioComponent } from '../btnprimario/btnprimario.component';
 import { ViewComponent } from '../../Visualizar/view/view.component';
 import { BtnsecundarioComponent } from '../btnsecundario/btnsecundario.component';
 import { PasswordComponent } from '../../Inputs/password/password.component';
+import { FormsModule, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-sumativavisual',
   standalone: true,
-  imports: [BtnprimarioComponent, ViewComponent, BtnsecundarioComponent, PasswordComponent],
+  imports: [BtnprimarioComponent, ViewComponent, BtnsecundarioComponent, FormsModule],
   templateUrl: './sumativavisual.component.html',
   styleUrls: ['./sumativavisual.component.css']
 })
@@ -17,7 +18,7 @@ export class SumativavisualComponent {
   showMessage: boolean = false;
   password: string = '';
   email: string = '';
-  text: string = '';
+  texto: string = '';
 
 
   onColorButtonClick() {
@@ -34,5 +35,17 @@ export class SumativavisualComponent {
 
   onCancel() {
     this.showMessage = false;
+  }
+
+  updatePassword(newPassword: string) {
+    this.password = newPassword;
+  }
+
+  updateEmail(newEmail: string) {
+    this.email = newEmail;
+  }
+
+  updateTexto(newTexto: string) {
+    this.texto = newTexto;
   }
 }
