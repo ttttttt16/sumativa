@@ -1,12 +1,17 @@
-button {
-    background-color: #FFD700;
-    /* Dorado suave */
+.btn-aceptar {
+    background-color: #4CAF50;
+    /* Verde */
     color: white;
-    /* Color del texto */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
     font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #FFC0CB;
-    /* Cambiar a rosado suave al pasar el mouse */
+.btn-aceptar:hover {
+    background-color: #45a049;
+    /* Verde más oscuro */
 }

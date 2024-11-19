@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -13,7 +13,10 @@ export class TextoComponent {
   texto: string = '';
   isValid: boolean = true;
 
+  @Output() textoChange = new EventEmitter<string>();
+
   validateTexto() {
     this.isValid = /^[a-zA-Z0-9\s]*$/.test(this.texto) && this.texto.length > 0;
+    this.textoChange.emit(this.texto); // Emitir el cambio
   }
 }

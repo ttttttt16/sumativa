@@ -1,19 +1,24 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { FormsModule, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-password',
   standalone: true,
-  imports: [FormsModule, BrowserModule],
+  imports: [FormsModule],
   templateUrl: './password.component.html',
   styleUrls: ['./password.component.css']
 })
 export class PasswordComponent {
   password: string = '';
-  isValid: boolean = true;
+  isPasswordVisible: boolean = false;
+
+  @Output() passwordChange = new EventEmitter<string>();
+
+  togglePasswordVisibility() {
+    this.isPasswordVisible = !this.isPasswordVisible;
+  }
 
   validatePassword() {
-    this.isValid = this.password.length >= 8;
+    this.passwordChange.emit(this.password);
   }
 }

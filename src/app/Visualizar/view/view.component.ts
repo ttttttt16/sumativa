@@ -10,9 +10,6 @@ import { Component, Input, OnChanges } from '@angular/core';
 export class ViewComponent {
   @Input() colorChange: boolean = false; // Propiedad para cambiar el color
   @Input() move: boolean = false; // Propiedad para controlar el movimiento
-  @Input() password: string = ''; // Para recibir el valor de la contraseña
-  @Input() email: string = ''; // Para recibir el valor del email
-  @Input() texto: string = ''; // Para recibir el valor del texto
   color: string = 'blue'; // Color inicial
   position: number = 0; // Inicializa la posición
 

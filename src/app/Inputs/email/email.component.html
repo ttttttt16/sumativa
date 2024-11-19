@@ -1,6 +1,2 @@
-<div>
-    <label for="email">Email:</label>
-    <input type="email" id="email" [(ngModel)]="email" (ngModelChange)="validateEmail()" required />
-    <div *ngIf="!isValid && email.length > 0" style="color: red;">Por favor, introduce un correo electrónico válido.
-    </div>
-</div>
+<label> Correo Electrónico: </label>
+<input id="Correo" type="email" placeholder="Ingrese su Correo Electrónico ☻">

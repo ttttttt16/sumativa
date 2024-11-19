@@ -1,6 +1,5 @@
 <app-btnprimario (buttonClick)="onColorButtonClick()"></app-btnprimario>
 <app-btnsecundario (moveEvent)="onMoveButtonClick()"></app-btnsecundario>
-<app-view [password]="password" [email]="email" [texto]="texto" [colorChange]="colorChange" [move]="move"></app-view>
-<app-password [(ngModel)]="password" (ngModelChange)="updatePassword($event)"></app-password>
-<app-email [(ngModel)]="email" (ngModelChange)="updateEmail($event)"></app-email>
-<app-texto [(ngModel)]="texto" (ngModelChange)="updateTexto($event)"></app-texto>
+<app-view [colorChange]="colorChange" [move]="move"></app-view>
+<app-btnaceptar></app-btnaceptar>
+<app-btncancelar></app-btncancelar>
