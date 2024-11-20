@@ -8,12 +8,12 @@ import { EmailComponent } from '../../Inputs/email/email.component';
 import { PasswordComponent } from '../../Inputs/password/password.component';
 import { TextoComponent } from '../../Inputs/texto/texto.component';
 import { CommonModule } from '@angular/common';
-import { NgModel } from '@angular/forms';
+import { FormsModule, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-sumativavisual',
   standalone: true,
-  imports: [BtnprimarioComponent, ViewComponent, BtnsecundarioComponent, BtnaceptarComponent, BtncancelarComponent, CommonModule, EmailComponent, PasswordComponent, TextoComponent],
+  imports: [BtnprimarioComponent, ViewComponent, BtnsecundarioComponent, BtnaceptarComponent, BtncancelarComponent, CommonModule, EmailComponent, PasswordComponent, TextoComponent, FormsModule],
   templateUrl: './sumativavisual.component.html',
   styleUrls: ['./sumativavisual.component.css']
 })
@@ -32,7 +32,15 @@ export class SumativavisualComponent {
     this.move = !this.move; // Cambia el estado de movimiento
   }
 
-  validateForm(): boolean {
-    return !!this.email && !!this.password && !!this.texto;
+  get isEmailValid() {
+    return this.email !== '' && /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(this.email);
+  }
+
+  get isPasswordValid() {
+    return this.password.length >= 8;
+  }
+
+  get isFormValid() {
+    return this.isEmailValid && this.isPasswordValid;
   }
 }

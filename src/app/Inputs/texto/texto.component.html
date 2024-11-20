@@ -1,7 +1,2 @@
-<div>
-    <label for="texto">Texto:</label>
-    <input type="text" id="texto" [(ngModel)]="texto" (ngModelChange)="validateTexto()" required>
-    <ul *ngIf="textoErrors.length">
-        <li *ngFor="let error of textoErrors">{{ error }}</li>
-    </ul>
-</div>
+<!-- src/app/Inputs/texto/texto.component.html -->
+<textarea [(ngModel)]="texto" placeholder="Ingrese texto opcional"></textarea>

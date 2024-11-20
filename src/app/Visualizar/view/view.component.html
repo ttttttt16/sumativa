@@ -1,11 +1,3 @@
-<div class="color-box" [style.background-color]="color" [style.transform]="'translateX(' + position + 'px)'"> </div>
-<div>
-    <h3>Vista de Datos Ingresados</h3>
-    <p><strong>Correo Electrónico:</strong> {{ email }}</p>
-    <p><strong>Contraseña:</strong> {{ password }}</p>
-    <p><strong>Texto:</strong> {{ texto }}</p>
+<!-- src/app/Visualizar/view/view.component.html -->
 
-    <div *ngIf="!email || !password || !texto" style="color: red;">
-        <p>Por favor, complete los campos obligatorios.</p>
-    </div>
-</div>
+<div class="color-box" [style.background-color]="color" [style.transform]="'translateX(' + position + 'px)'"> </div>

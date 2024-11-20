@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { FormsModule, NgModel } from '@angular/forms';
-import { EmailComponent } from '../email/email.component';
+import { FormsModule } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -11,17 +11,15 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./password.component.css']
 })
 export class PasswordComponent {
-  @Input() password: string = '';
-  @Output() passwordChange = new EventEmitter<string>();
+  password: string = '';
   passwordErrors: string[] = [];
 
-  validatePassword() {
+  validatePassword(form: NgForm) {
     this.passwordErrors = [];
     if (!this.password) {
-      this.passwordErrors.push('La contraseña es obligatoria.');
+      this.passwordErrors.push('El campo de contraseña es obligatorio.');
     } else if (this.password.length < 8) {
       this.passwordErrors.push('La contraseña debe tener al menos 8 caracteres.');
     }
-    this.passwordChange.emit(this.password); // Emitir el cambio
   }
 }

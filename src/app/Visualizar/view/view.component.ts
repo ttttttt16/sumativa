@@ -1,11 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnChanges } from '@angular/core';
-import { NgModel } from '@angular/forms';
+import { FormsModule, NgModel } from '@angular/forms';
+import { EmailComponent } from '../../Inputs/email/email.component';
+import { PasswordComponent } from '../../Inputs/password/password.component';
+import { TextoComponent } from '../../Inputs/texto/texto.component';
 
 @Component({
   selector: 'app-view',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './view.component.html',
   styleUrl: './view.component.css'
 })
@@ -14,9 +17,6 @@ export class ViewComponent {
   @Input() move: boolean = false; // Propiedad para controlar el movimiento
   color: string = 'blue'; // Color inicial
   position: number = 0; // Inicializa la posición
-  @Input() email: string = '';
-  @Input() password: string = '';
-  @Input() texto: string = '';
 
 
   ngOnChanges() {
@@ -36,4 +36,6 @@ export class ViewComponent {
   moveBox() {
     this.position += 10; // Incrementa la posición para mover la caja
   }
+
+
 }
