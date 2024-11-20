@@ -18,21 +18,20 @@
             <input type="text" [(ngModel)]="texto" name="text" />
         </label>
         <br />
+        <app-btnaceptar (acceptClick)="onAccept()"></app-btnaceptar>
 
     </form>
 
-    <!-- Cuadro de texto para el mensaje de éxito -->
-    <div *ngIf="showMessage" class="success-message">
-        <strong>{{ successMessage }}</strong>
-    </div>
-
 </div>
 
-
+<!-- Cuadro de texto para el mensaje de éxito -->
+<div *ngIf="successMessage" class="success-message">
+    <strong>{{ successMessage }}</strong>
+</div>
 
 <app-btnprimario (buttonClick)="onColorButtonClick()"></app-btnprimario>
 <app-btnsecundario (moveEvent)="onMoveButtonClick()"></app-btnsecundario>
-<app-btnaceptar (acceptClick)="onAccept()"></app-btnaceptar>
-
+<app-btncancelar></app-btncancelar>
+<app-btnoscuro></app-btnoscuro>
 <app-view [colorChange]="colorChange" [move]="move" [email]="email" [password]="password" [text]="texto"
     [successMessage]="successMessage"></app-view>

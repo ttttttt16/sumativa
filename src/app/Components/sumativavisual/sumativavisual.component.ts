@@ -9,11 +9,12 @@ import { PasswordComponent } from '../../Inputs/password/password.component';
 import { TextoComponent } from '../../Inputs/texto/texto.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgModel } from '@angular/forms';
+import { BtnoscuroComponent } from '../btnoscuro/btnoscuro.component';
 
 @Component({
   selector: 'app-sumativavisual',
   standalone: true,
-  imports: [BtnprimarioComponent, ViewComponent, BtnsecundarioComponent, BtnaceptarComponent, CommonModule, EmailComponent, PasswordComponent, TextoComponent, FormsModule],
+  imports: [BtnprimarioComponent, ViewComponent, BtnsecundarioComponent, BtnaceptarComponent, CommonModule, EmailComponent, PasswordComponent, TextoComponent, FormsModule, BtncancelarComponent, BtnoscuroComponent],
   templateUrl: './sumativavisual.component.html',
   styleUrls: ['./sumativavisual.component.css']
 })
