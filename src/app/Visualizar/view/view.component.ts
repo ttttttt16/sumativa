@@ -1,16 +1,30 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnChanges } from '@angular/core';
 import { FormsModule, NgModel } from '@angular/forms';
+import { trigger, state, style, transition, animate } from '@angular/animations';
+
 import { EmailComponent } from '../../Inputs/email/email.component';
 import { PasswordComponent } from '../../Inputs/password/password.component';
 import { TextoComponent } from '../../Inputs/texto/texto.component';
+import { BtncancelarComponent } from '../../Components/btncancelar/btncancelar.component';
 
 @Component({
   selector: 'app-view',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, BtncancelarComponent],
   templateUrl: './view.component.html',
-  styleUrl: './view.component.css'
+  styleUrl: './view.component.css',
+  animations: [
+    trigger('messageAnimation', [
+      state('void', style({ opacity: 0, transform: 'translateY(-20px)' })),
+      transition(':enter', [
+        animate('300ms ease-in')
+      ]),
+      transition(':leave', [
+        animate('300ms ease-out', style({ opacity: 0, transform: 'translateY(20px)' }))
+      ])
+    ])
+  ]
 })
 export class ViewComponent {
   @Input() colorChange: boolean = false; // Propiedad para cambiar el color
@@ -20,7 +34,7 @@ export class ViewComponent {
   @Input() email: string = '';
   @Input() password: string = '';
   @Input() text: string = '';
-  @Input() successMessage: string = ''; // Nueva propiedad para el mensaje de éxito
+  @Input() showMessage: boolean = false; // Nueva propiedad para controlar la visibilidad del mensaje
 
 
 
@@ -40,6 +54,10 @@ export class ViewComponent {
 
   moveBox() {
     this.position += 10; // Incrementa la posición para mover la caja
+  }
+
+  closeMessage() {
+    this.showMessage = false; // Cambiar el estado para ocultar el mensaje
   }
 
 

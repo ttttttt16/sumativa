@@ -11,31 +11,34 @@
     /* Añade la transición para el movimiento y el color */
 }
 
-:host {
-    display: block;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #E6E6FA;
-    /* Lila claro */
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+
+
 
 .view-container {
-    margin: 1rem 0;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f9f9f9;
+    flex: 1;
+    /* Ocupa el espacio disponible */
+    margin-right: 40px;
+    /* Espacio entre los componentes */
+    background-color: #F8BBD0;
+    /* Rosa suave */
+    border-radius: 15px;
+    /* Bordes redondeados */
+    padding: 30px;
+    /* Espaciado interno aumentado */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    transition: transform 0.3s;
+    /* Transición suave para el efecto de hover */
 }
 
-h2 {
-    margin-bottom: 0.5rem;
+.view-container:hover {
+    transform: scale(1.02);
+    /* Efecto de aumento al pasar el mouse */
 }
 
-p {
-    margin: 0.5rem 0;
-}
+
+
+
 
 .success-message {
     border: 2px solid green;
@@ -52,4 +55,56 @@ p {
     /* Color del texto */
     font-weight: bold;
     /* Texto en negrita */
+}
+
+:host {
+    display: block;
+    background-color: #F8BBD0;
+    /* Rosa suave */
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 600px;
+    /* Limitar el ancho para mantener la simetría */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* Centrar el texto */
+}
+
+h2 {
+    color: #C2185B;
+    /* Rosa oscuro */
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #424242;
+    /* Texto gris oscuro */
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    color: #6A1B9A;
+    /* Color púrpura oscuro para los títulos */
+    margin-bottom: 20px;
+    /* Espaciado inferior para los títulos */
+    font-family: 'Arial', sans-serif;
+    /* Fuente moderna */
+}
+
+p {
+    color: #333;
+    /* Color de texto gris oscuro */
+    line-height: 1.6;
+    /* Espaciado entre líneas */
+    margin-bottom: 15px;
+    /* Espaciado inferior para los párrafos */
+    font-family: 'Arial', sans-serif;
+    /* Fuente moderna */
 }

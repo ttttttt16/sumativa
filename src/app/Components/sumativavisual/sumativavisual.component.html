@@ -1,4 +1,19 @@
 <!-- src/app/Components/sumativavisual/sumativavisual.component.html -->
+
+<div class="main-container">
+    <div class="view-container">
+        <app-view [colorChange]="colorChange" [move]="move" [email]="email" [password]="password" [text]="texto"
+            [showMessage]="showMessage"></app-view>
+    </div>
+    <div class="sumativa-container">
+        <app-btnprimario (buttonClick)="onColorButtonClick()"></app-btnprimario>
+        <app-btnsecundario (moveEvent)="onMoveButtonClick()"></app-btnsecundario>
+        <app-btnaceptar (acceptClick)="onAcceptClick()"></app-btnaceptar>
+        <app-btncancelar></app-btncancelar>
+        <app-btnoscuro></app-btnoscuro>
+    </div>
+</div>
+
 <div [style.backgroundColor]="colorChange ? 'lightblue' : 'white'">
     <h1>Sumativa Visual</h1>
 
@@ -18,20 +33,7 @@
             <input type="text" [(ngModel)]="texto" name="text" />
         </label>
         <br />
-        <app-btnaceptar (acceptClick)="onAccept()"></app-btnaceptar>
 
     </form>
 
 </div>
-
-<!-- Cuadro de texto para el mensaje de éxito -->
-<div *ngIf="successMessage" class="success-message">
-    <strong>{{ successMessage }}</strong>
-</div>
-
-<app-btnprimario (buttonClick)="onColorButtonClick()"></app-btnprimario>
-<app-btnsecundario (moveEvent)="onMoveButtonClick()"></app-btnsecundario>
-<app-btncancelar></app-btncancelar>
-<app-btnoscuro></app-btnoscuro>
-<app-view [colorChange]="colorChange" [move]="move" [email]="email" [password]="password" [text]="texto"
-    [successMessage]="successMessage"></app-view>

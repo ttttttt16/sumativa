@@ -14,7 +14,7 @@ import { BtnoscuroComponent } from '../btnoscuro/btnoscuro.component';
 @Component({
   selector: 'app-sumativavisual',
   standalone: true,
-  imports: [BtnprimarioComponent, ViewComponent, BtnsecundarioComponent, BtnaceptarComponent, CommonModule, EmailComponent, PasswordComponent, TextoComponent, FormsModule, BtncancelarComponent, BtnoscuroComponent],
+  imports: [BtnprimarioComponent, ViewComponent, BtnsecundarioComponent, BtnaceptarComponent, CommonModule, EmailComponent, PasswordComponent, TextoComponent, FormsModule, BtnoscuroComponent, BtncancelarComponent],
   templateUrl: './sumativavisual.component.html',
   styleUrls: ['./sumativavisual.component.css']
 })
@@ -22,7 +22,7 @@ export class SumativavisualComponent {
   colorChange: boolean = false; // Variable para controlar el cambio de color
   move: boolean = false; // Variable para controlar el movimiento
   successMessage: string = '';
-  showMessage: boolean = false; // Controla la visibilidad del mensaje
+  showMessage: boolean = false; // Variable para controlar la visibilidad del mensaje
   email: string = '';
   password: string = '';
   texto: string = '';
@@ -35,21 +35,8 @@ export class SumativavisualComponent {
     this.move = !this.move; // Cambia el estado de movimiento
   }
 
-  onAccept() {
-    this.successMessage = this.isFormValid ? 'Mensaje enviado con éxito' : '';
-    this.showMessage = true; // Muestra el mensaje
-
+  onAcceptClick() {
+    this.showMessage = !this.showMessage; // Alternar el estado
   }
 
-  get isEmailValid() {
-    return this.email !== '' && /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(this.email);
-  }
-
-  get isPasswordValid() {
-    return this.password.length >= 8;
-  }
-
-  get isFormValid() {
-    return this.isEmailValid && this.isPasswordValid;
-  }
 }

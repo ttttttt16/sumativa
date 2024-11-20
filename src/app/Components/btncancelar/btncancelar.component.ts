@@ -8,9 +8,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./btncancelar.component.css']
 })
 export class BtncancelarComponent {
-  @Output() buttonClick = new EventEmitter<void>();
+  @Output() closeClick = new EventEmitter<void>(); // Evento para el clic
 
   onClick() {
-    this.buttonClick.emit(); // Emite el evento al hacer clic
+    this.closeClick.emit(); // Emitir el evento al hacer clic
   }
 }

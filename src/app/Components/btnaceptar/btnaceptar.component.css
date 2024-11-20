@@ -1,17 +1,19 @@
-.btn-aceptar {
-    background-color: #4CAF50;
-    /* Verde */
+button {
+    background-color: green;
+    /* Color de fondo del botón */
     color: white;
+    /* Color del texto */
     border: none;
-    border-radius: 5px;
+    /* Sin borde */
     padding: 10px 20px;
-    font-size: 16px;
+    /* Espaciado interno */
+    border-radius: 5px;
+    /* Bordes redondeados */
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
+    /* Cambiar el cursor al pasar el mouse */
 }
 
-.btn-aceptar:hover {
-    background-color: #45a049;
-    /* Verde más oscuro */
-}
+button:hover {
+    background-color: darkgreen;
+    /* Color de fondo al pasar el mouse */
+}   

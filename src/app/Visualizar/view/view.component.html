@@ -6,11 +6,15 @@
     <p><strong>Contraseña:</strong> {{ password }}</p>
     <p><strong>Texto:</strong> {{ text }}</p>
 
-    <!-- Muestra el mensaje de éxito directamente en el componente View -->
-    <div *ngIf="successMessage" class="success-message">
-        <strong>{{ successMessage }}</strong>
-    </div>
-    
+
+
 </div>
 
 <div class="color-box" [style.background-color]="color" [style.transform]="'translateX(' + position + 'px)'"> </div>
+
+
+<div *ngIf="showMessage" @messageAnimation
+    style="background-color: lightgray; padding: 20px; border-radius: 10px; margin-top: 20px;">
+    <p>¡Has hecho clic en Aceptar!</p>
+    <app-btncancelar (closeClick)="closeMessage()"></app-btncancelar>
+</div>
