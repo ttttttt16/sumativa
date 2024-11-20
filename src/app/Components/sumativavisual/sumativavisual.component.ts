@@ -13,13 +13,14 @@ import { FormsModule, NgModel } from '@angular/forms';
 @Component({
   selector: 'app-sumativavisual',
   standalone: true,
-  imports: [BtnprimarioComponent, ViewComponent, BtnsecundarioComponent, BtnaceptarComponent, BtncancelarComponent, CommonModule, EmailComponent, PasswordComponent, TextoComponent, FormsModule],
+  imports: [BtnprimarioComponent, ViewComponent, BtnsecundarioComponent, BtnaceptarComponent, CommonModule, EmailComponent, PasswordComponent, TextoComponent, FormsModule],
   templateUrl: './sumativavisual.component.html',
   styleUrls: ['./sumativavisual.component.css']
 })
 export class SumativavisualComponent {
   colorChange: boolean = false; // Variable para controlar el cambio de color
   move: boolean = false; // Variable para controlar el movimiento
+  successMessage: string = '';
   email: string = '';
   password: string = '';
   texto: string = '';
@@ -30,6 +31,10 @@ export class SumativavisualComponent {
 
   onMoveButtonClick() {
     this.move = !this.move; // Cambia el estado de movimiento
+  }
+
+  onAccept() {
+    this.successMessage = 'Mensaje enviado con éxito';
   }
 
   get isEmailValid() {

@@ -20,6 +20,8 @@ export class ViewComponent {
   @Input() email: string = '';
   @Input() password: string = '';
   @Input() text: string = '';
+  @Input() successMessage: string = ''; // Nueva propiedad para el mensaje de éxito
+
 
 
   ngOnChanges() {

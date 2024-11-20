@@ -8,9 +8,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./btnaceptar.component.css']
 })
 export class BtnaceptarComponent {
-  @Output() buttonClick = new EventEmitter<void>();
+  @Output() acceptClick = new EventEmitter<void>();
 
   onClick() {
-    this.buttonClick.emit(); // Emite el evento al hacer clic
+    this.acceptClick.emit();
   }
 }

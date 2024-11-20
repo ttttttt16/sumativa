@@ -5,5 +5,9 @@
     <p><strong>Email:</strong> {{ email }}</p>
     <p><strong>Contraseña:</strong> {{ password }}</p>
     <p><strong>Texto:</strong> {{ text }}</p>
-</div>
-<div class="color-box" [style.background-color]="color" [style.transform]="'translateX(' + position + 'px)'"> </div>
+    <div *ngIf="successMessage"
+        style="border: 1px solid green; padding: 10px; margin-top: 10px; background-color: #e6ffe6;">
+        <strong>{{ successMessage }}</strong>
+
+    </div>
+    <div class="color-box" [style.background-color]="color" [style.transform]="'translateX(' + position + 'px)'"> </div>
