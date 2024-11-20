@@ -20,8 +20,11 @@
         <br />
 
     </form>
-    <p *ngIf="successMessage"><strong>{{ successMessage }}</strong></p> <!-- Mostrar mensaje de éxito -->
 
+    <!-- Cuadro de texto para el mensaje de éxito -->
+    <div *ngIf="showMessage" class="success-message">
+        <strong>{{ successMessage }}</strong>
+    </div>
 
 </div>
 
@@ -30,5 +33,6 @@
 <app-btnprimario (buttonClick)="onColorButtonClick()"></app-btnprimario>
 <app-btnsecundario (moveEvent)="onMoveButtonClick()"></app-btnsecundario>
 <app-btnaceptar (acceptClick)="onAccept()"></app-btnaceptar>
+
 <app-view [colorChange]="colorChange" [move]="move" [email]="email" [password]="password" [text]="texto"
     [successMessage]="successMessage"></app-view>

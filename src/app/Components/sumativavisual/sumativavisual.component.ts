@@ -21,6 +21,7 @@ export class SumativavisualComponent {
   colorChange: boolean = false; // Variable para controlar el cambio de color
   move: boolean = false; // Variable para controlar el movimiento
   successMessage: string = '';
+  showMessage: boolean = false; // Controla la visibilidad del mensaje
   email: string = '';
   password: string = '';
   texto: string = '';
@@ -34,7 +35,9 @@ export class SumativavisualComponent {
   }
 
   onAccept() {
-    this.successMessage = 'Mensaje enviado con éxito';
+    this.successMessage = this.isFormValid ? 'Mensaje enviado con éxito' : '';
+    this.showMessage = true; // Muestra el mensaje
+
   }
 
   get isEmailValid() {

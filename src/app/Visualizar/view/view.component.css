@@ -36,3 +36,20 @@ h2 {
 p {
     margin: 0.5rem 0;
 }
+
+.success-message {
+    border: 2px solid green;
+    /* Borde verde */
+    padding: 10px;
+    /* Espaciado interno */
+    margin-top: 10px;
+    /* Margen superior */
+    background-color: #e6ffe6;
+    /* Color de fondo suave */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    color: green;
+    /* Color del texto */
+    font-weight: bold;
+    /* Texto en negrita */
+}
