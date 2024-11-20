@@ -17,6 +17,9 @@ export class ViewComponent {
   @Input() move: boolean = false; // Propiedad para controlar el movimiento
   color: string = 'blue'; // Color inicial
   position: number = 0; // Inicializa la posición
+  @Input() email: string = '';
+  @Input() password: string = '';
+  @Input() text: string = '';
 
 
   ngOnChanges() {
