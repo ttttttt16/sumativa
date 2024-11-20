@@ -1,9 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input, OnChanges } from '@angular/core';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-view',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './view.component.html',
   styleUrl: './view.component.css'
 })
@@ -12,6 +14,10 @@ export class ViewComponent {
   @Input() move: boolean = false; // Propiedad para controlar el movimiento
   color: string = 'blue'; // Color inicial
   position: number = 0; // Inicializa la posición
+  @Input() email: string = '';
+  @Input() password: string = '';
+  @Input() texto: string = '';
+
 
   ngOnChanges() {
     if (this.colorChange) {

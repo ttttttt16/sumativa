@@ -1,6 +1,7 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { PasswordComponent } from '../password/password.component';
 
 @Component({
   selector: 'app-texto',
@@ -10,13 +11,15 @@ import { BrowserModule } from '@angular/platform-browser';
   styleUrls: ['./texto.component.css']
 })
 export class TextoComponent {
-  texto: string = '';
-  isValid: boolean = true;
-
+  @Input() texto: string = '';
   @Output() textoChange = new EventEmitter<string>();
+  textoErrors: string[] = [];
 
   validateTexto() {
-    this.isValid = /^[a-zA-Z0-9\s]*$/.test(this.texto) && this.texto.length > 0;
+    this.textoErrors = [];
+    if (!this.texto) {
+      this.textoErrors.push('Este campo es obligatorio.');
+    }
     this.textoChange.emit(this.texto); // Emitir el cambio
   }
 }

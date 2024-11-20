@@ -1,5 +1,22 @@
+<div>
+    <h2>Formulario de Entrada</h2>
+
+    <!-- Componente Email -->
+    <app-email [(email)]="email"></app-email>
+
+    <!-- Componente Password -->
+    <app-password [(password)]="password"></app-password>
+
+    <!-- Componente Texto -->
+    <app-texto [(texto)]="texto"></app-texto>
+
+    <!-- Mensaje de error si el formulario no es válido -->
+    <div *ngIf="!validateForm()" style="color: red;">
+        <p>Por favor, complete los campos obligatorios.</p>
+    </div>
+</div>
 <app-btnprimario (buttonClick)="onColorButtonClick()"></app-btnprimario>
 <app-btnsecundario (moveEvent)="onMoveButtonClick()"></app-btnsecundario>
-<app-view [colorChange]="colorChange" [move]="move"></app-view>
+<app-view [colorChange]="colorChange" [move]="move" [email]="email" [password]="password" [texto]="texto"></app-view>
 <app-btnaceptar></app-btnaceptar>
 <app-btncancelar></app-btncancelar>
