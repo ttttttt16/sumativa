@@ -35,6 +35,8 @@ export class ViewComponent {
   @Input() password: string = '';
   @Input() text: string = '';
   @Input() showMessage: boolean = false; // Nueva propiedad para controlar la visibilidad del mensaje
+  @Input() isDarkMode: boolean = false; // Asegúrate de que esta propiedad esté definida
+
 
 
 
@@ -58,6 +60,10 @@ export class ViewComponent {
 
   closeMessage() {
     this.showMessage = false; // Cambiar el estado para ocultar el mensaje
+  }
+
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode; // Cambiar el estado del modo oscuro
   }
 
 

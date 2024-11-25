@@ -26,6 +26,8 @@ export class SumativavisualComponent {
   email: string = '';
   password: string = '';
   texto: string = '';
+  isDarkMode: boolean = false; // Agregar estado para modo oscuro
+
 
   onColorButtonClick() {
     this.colorChange = !this.colorChange; // Cambia el estado de color
@@ -37,6 +39,10 @@ export class SumativavisualComponent {
 
   onAcceptClick() {
     this.showMessage = !this.showMessage; // Alternar el estado
+  }
+
+  onToggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode; // Cambiar el estado del modo oscuro
   }
 
 }
