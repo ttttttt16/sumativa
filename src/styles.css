@@ -148,6 +148,8 @@ body.dark-mode {
 
 /* Estilos para contenedores en modo oscuro */
 .sumativa-container {
+    border-color: #F8BBD0;
+    border: 5px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -159,6 +161,8 @@ body.dark-mode {
 
 /* Estilos para contenedores en modo oscuro */
 :host {
+    border-color: #F8BBD0;
+    border: 35px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -168,16 +172,33 @@ body.dark-mode {
     /* Transición suave */
 }
 
-.dark-mode .container {
+/* Estilos para el contenedor en modo normal */
+.container {
+    max-width: 1200px;
+    /* Ancho máximo para el contenedor */
+    margin: 20px auto;
+    /* Centrar el contenedor */
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    background-color: #1e1e1e;
-    /* Fondo de contenedor en modo oscuro */
-    transition: background-color 0.3s ease;
+    /* Espaciado interno */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    background-color: #ffffff;
+    /* Fondo blanco */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     /* Transición suave */
 }
 
+/* Estilos para el contenedor en modo oscuro */
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    /* Fondo oscuro para el contenedor */
+    color: #e0e0e0;
+    /* Texto claro para el contenedor */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    /* Sombra más pronunciada */
+}
 
 /* Estilos para botones */
 button {
