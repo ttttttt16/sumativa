@@ -1,6 +1,6 @@
 <!-- src/app/Components/sumativavisual/sumativavisual.component.html -->
 
-<div class="main-container">
+<div class="sumativa-container" [ngClass]="{'dark-mode': colorChange}">
     <div class="view-container">
         <app-view [colorChange]="colorChange" [move]="move" [email]="email" [password]="password" [text]="texto"
             [showMessage]="showMessage"></app-view>
