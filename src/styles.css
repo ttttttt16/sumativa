@@ -1,4 +1,5 @@
 body {
+    transition: background-color 0.3s, color 0.3s;
     font-family: 'Roboto', sans-serif;
     background-color: #F9F9F9;
     /* Color de fondo suave */
@@ -15,15 +16,96 @@ h3 {
     /* Rosado suave para encabezados */
 }
 
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    /* Fondo oscuro */
+    color: #ffffff;
+    /* Texto blanco */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: inherit;
+    /* Heredar color del body */
+}
+
+/* Estilos para botones */
 button {
+    background-color: #6200ea;
+    /* Color de fondo del botón */
+    color: white;
+    /* Color del texto */
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-    opacity: 0.8;
-    /* Efecto de hover */
+    background-color: #3700b3;
+    /* Color al pasar el mouse */
+    transform: scale(1.05);
+    /* Efecto de escala al pasar el mouse */
+}
+
+/* Estilos para inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #6200ea;
+    /* Color del borde al enfocar */
+}
+
+/* Modo oscuro para botones e inputs */
+body.dark-mode button {
+    background-color: #bb86fc;
+    /* Color de fondo del botón en modo oscuro */
+}
+
+body.dark-mode button:hover {
+    background-color: #3700b3;
+    /* Color al pasar el mouse en modo oscuro */
+}
+
+body.dark-mode input {
+    background-color: #333;
+    /* Fondo oscuro para inputs */
+    color: white;
+    /* Texto blanco */
+    border: 1px solid #555;
+    /* Borde más claro */
+}
+
+body.dark-mode input:focus {
+    border-color: #bb86fc;
+    /* Color del borde al enfocar en modo oscuro */
+}
+
+/* Contenedores generales */
+.container {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f5f5f5;
+    /* Fondo claro por defecto */
+}
+
+/* Modo oscuro para contenedores */
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    /* Fondo oscuro en modo oscuro */
+    border: 1px solid #444;
+    /* Borde más oscuro */
 }

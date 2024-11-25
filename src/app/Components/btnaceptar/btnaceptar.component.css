@@ -1,19 +1,30 @@
+/* btnaceptar.component.css, btncancelar.component.css, btnoscuro.component.css, btnprimario.component.css */
 button {
-    background-color: green;
+    background-color: #6200ea;
     /* Color de fondo del botón */
     color: white;
     /* Color del texto */
     border: none;
-    /* Sin borde */
-    padding: 10px 20px;
-    /* Espaciado interno */
     border-radius: 5px;
-    /* Bordes redondeados */
+    padding: 10px 20px;
     cursor: pointer;
-    /* Cambiar el cursor al pasar el mouse */
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background-color: darkgreen;
-    /* Color de fondo al pasar el mouse */
-}   
+    background-color: #3700b3;
+    /* Color al pasar el mouse */
+    transform: scale(1.05);
+    /* Efecto de escala al pasar el mouse */
+}
+
+/* Modo oscuro */
+body.dark-mode button {
+    background-color: #bb86fc;
+    /* Color de fondo del botón en modo oscuro */
+}
+
+body.dark-mode button:hover {
+    background-color: #3700b3;
+    /* Color al pasar el mouse en modo oscuro */
+}

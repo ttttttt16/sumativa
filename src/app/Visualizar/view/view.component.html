@@ -1,5 +1,7 @@
 <!-- src/app/Visualizar/view/view.component.html -->
-<div [ngClass]="{'dark-mode': isDarkMode}">
+<div class="container" [ngClass]="{'dark-mode': isDarkMode}">
+    <p>Modo oscuro: {{ isDarkMode ? 'Activado' : 'Desactivado' }}</p>
+
     <div>
         <h2>Datos Ingresados</h2>
         <p><strong>Email:</strong> {{ email }}</p>

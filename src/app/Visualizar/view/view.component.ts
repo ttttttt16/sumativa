@@ -62,8 +62,9 @@ export class ViewComponent {
     this.showMessage = false; // Cambiar el estado para ocultar el mensaje
   }
 
-  toggleDarkMode() {
-    this.isDarkMode = !this.isDarkMode; // Cambiar el estado del modo oscuro
+  onToggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+    document.body.classList.toggle('dark-mode', this.isDarkMode); // Agregar o quitar clase dark-mode
   }
 
 
