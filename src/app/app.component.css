@@ -1,27 +1,30 @@
-.main-container {
-    display: flex;
-    /* Usar flexbox para alinear los componentes */
-    justify-content: space-between;
-    /* Espacio entre los componentes */
-    align-items: flex-start;
-    /* Alinear los componentes en la parte superior */
-    padding: 40px;
-    /* Espaciado alrededor del contenedor principal */
-    max-width: 1200px;
-    /* Ancho máximo para mantener la simetría */
-    margin: 0 auto;
-    /* Centrar el contenedor en la página */
-    background-color: #FDF6E3;
-    /* Fondo suave claro */
-    border-radius: 15px;
-    /* Bordes redondeados */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    /* Sombra suave */
-    transition: background-color 0.3s;
-    /* Transición suave para el fondo */
+/* Estilos para el componente principal de la aplicación */
+h1 {
+    color: #6200ea;
+    /* Color del título */
+    text-align: center;
+    /* Centrar el título */
+    margin-bottom: 20px;
+    /* Espaciado inferior */
 }
 
-.main-container:hover {
-    background-color: #FCE4EC;
-    /* Cambio de color al pasar el mouse */
+/* Modo oscuro para el título */
+body.dark-mode h1 {
+    color: #bb86fc;
+    /* Color del título en modo oscuro */
+}
+
+/* Contenedor principal */
+.main-container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    /* Fondo claro por defecto */
+}
+
+/* Modo oscuro para el contenedor principal */
+body.dark-mode .main-container {
+    background-color: #1e1e1e;
+    /* Fondo oscuro en modo oscuro */
 }

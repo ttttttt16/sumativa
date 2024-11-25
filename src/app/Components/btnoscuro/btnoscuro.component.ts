@@ -8,9 +8,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './btnoscuro.component.css'
 })
 export class BtnoscuroComponent {
-  @Output() toggleDarkMode = new EventEmitter<void>();
+  @Output() darkModeToggle = new EventEmitter<void>(); // Evento para el toggle
 
   onClick() {
-    this.toggleDarkMode.emit(); // Emitir el evento al hacer clic
+    this.darkModeToggle.emit(); // Emitir el evento al hacer clic
   }
 }

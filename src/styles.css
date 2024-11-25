@@ -1,37 +1,27 @@
+/* Estilos generales */
 body {
     transition: background-color 0.3s, color 0.3s;
-    font-family: 'Roboto', sans-serif;
-    background-color: #F9F9F9;
-    /* Color de fondo suave */
+    font-family: 'Arial', sans-serif;
+    /* Fuente general */
     margin: 0;
     padding: 0;
-    color: #333;
-    /* Color del texto */
 }
 
-h1,
-h2,
-h3 {
-    color: #FFC0CB;
-    /* Rosado suave para encabezados */
+/* Estilos para el contenedor principal */
+.main-container {
+    max-width: 1200px;
+    /* Ancho máximo */
+    margin: 0 auto;
+    /* Centrado */
+    padding: 20px;
 }
 
 /* Modo oscuro */
 body.dark-mode {
     background-color: #121212;
     /* Fondo oscuro */
-    color: #ffffff;
-    /* Texto blanco */
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: inherit;
-    /* Heredar color del body */
+    color: #e0e0e0;
+    /* Texto gris claro para mejor legibilidad */
 }
 
 /* Estilos para botones */
@@ -41,10 +31,13 @@ button {
     color: white;
     /* Color del texto */
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
+    border-radius: 8px;
+    padding: 12px 24px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    /* Sombra */
 }
 
 button:hover {
@@ -54,52 +47,56 @@ button:hover {
     /* Efecto de escala al pasar el mouse */
 }
 
-/* Estilos para inputs */
-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: border-color 0.3s;
-}
-
-input:focus {
-    border-color: #6200ea;
-    /* Color del borde al enfocar */
-}
-
-/* Modo oscuro para botones e inputs */
+/* Modo oscuro para botones */
 body.dark-mode button {
     background-color: #bb86fc;
     /* Color de fondo del botón en modo oscuro */
+    color: #121212;
+    /* Texto oscuro para contraste */
 }
 
 body.dark-mode button:hover {
-    background-color: #3700b3;
+    background-color: #6200ea;
     /* Color al pasar el mouse en modo oscuro */
 }
 
-body.dark-mode input {
-    background-color: #333;
+/* Estilos para inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    transition: border-color 0.3s, background-color 0.3s;
+    background-color: #1e1e1e;
     /* Fondo oscuro para inputs */
-    color: white;
-    /* Texto blanco */
-    border: 1px solid #555;
-    /* Borde más claro */
+    color: #e0e0e0;
+    /* Texto claro */
+    font-size: 16px;
 }
 
-body.dark-mode input:focus {
+input:focus {
     border-color: #bb86fc;
-    /* Color del borde al enfocar en modo oscuro */
+    /* Color del borde al enfocar */
+}
+
+/* Modo oscuro para inputs */
+body.dark-mode input {
+    background-color: #333;
+    /* Fondo más oscuro para inputs */
+    border: 1px solid #555;
+    /* Borde más claro */
+    color: #e0e0e0;
+    /* Texto claro */
 }
 
 /* Contenedores generales */
 .container {
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #f5f5f5;
     /* Fondo claro por defecto */
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 /* Modo oscuro para contenedores */
@@ -108,4 +105,52 @@ body.dark-mode .container {
     /* Fondo oscuro en modo oscuro */
     border: 1px solid #444;
     /* Borde más oscuro */
+}
+
+/* Estilos de texto */
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 10px 0;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    /* Sombra para mejorar la legibilidad */
+}
+
+/* Modo oscuro para títulos */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: #bb86fc;
+    /* Color de texto para títulos en modo oscuro */
+}
+
+/* Estilos globales para modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    /* Fondo oscuro para toda la página */
+    color: #e0e0e0;
+    /* Texto claro para contraste */
+}
+
+/* Asegúrate de que todos los botones tengan un buen contraste */
+body.dark-mode button {
+    background-color: #333;
+    /* Fondo de botones en modo oscuro */
+    color: #ffffff;
+    /* Texto de botones en modo oscuro */
+}
+
+/* Estilos para enlaces */
+body.dark-mode a {
+    color: #bb86fc;
+    /* Color de enlace en modo oscuro */
+}
+
+body.dark-mode a:hover {
+    color: #6200ea;
+    /* Color de enlace al pasar el mouse en modo oscuro */
 }

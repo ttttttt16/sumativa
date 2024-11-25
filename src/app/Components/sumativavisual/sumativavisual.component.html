@@ -3,14 +3,14 @@
 <div class="main-container">
     <div class="view-container">
         <app-view [colorChange]="colorChange" [move]="move" [email]="email" [password]="password" [text]="texto"
-            [showMessage]="showMessage" [isDarkMode]="isDarkMode"></app-view>
+            [showMessage]="showMessage"></app-view>
     </div>
     <div class="sumativa-container">
         <app-btnprimario (buttonClick)="onColorButtonClick()"></app-btnprimario>
         <app-btnsecundario (moveEvent)="onMoveButtonClick()"></app-btnsecundario>
         <app-btnaceptar (acceptClick)="onAcceptClick()"></app-btnaceptar>
         <app-btncancelar></app-btncancelar>
-        <app-btnoscuro (toggleDarkMode)="onToggleDarkMode()"></app-btnoscuro>
+        <app-btnoscuro (darkModeToggle)="toggleDarkMode()"></app-btnoscuro>
     </div>
 </div>
 

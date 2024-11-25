@@ -67,26 +67,25 @@ button:active {
 }
 
 .main-container {
-    display: flex;
-    /* Usar flexbox para alinear los componentes */
-    justify-content: space-between;
-    /* Espacio entre los componentes */
-    align-items: flex-start;
-    /* Alinear los componentes en la parte superior */
-    padding: 40px;
-    /* Espaciado alrededor del contenedor principal */
-    max-width: 1200px;
-    /* Ancho máximo para mantener la simetría */
-    margin: 0 auto;
-    /* Centrar el contenedor en la página */
-    background-color: #FDF6E3;
-    /* Fondo suave claro */
-    border-radius: 15px;
-    /* Bordes redondeados */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    /* Sombra suave */
-    transition: background-color 0.3s;
-    /* Transición suave para el fondo */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #f5f5f5;
+    /* Fondo claro por defecto */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo oscuro */
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    /* Fondo oscuro */
+    color: #e0e0e0;
+    /* Texto claro */
+}
+
+button {
+    margin-top: 10px;
+    /* Espaciado entre botones */
 }
 
 .main-container:hover {

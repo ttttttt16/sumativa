@@ -1,7 +1,6 @@
 <!-- src/app/Inputs/email/email.component.html -->
 <form #emailForm="ngForm" (ngSubmit)="validateEmail(emailForm)">
-    <input type="email" [(ngModel)]="email" name="email" required placeholder="Ingrese su correo" />
-    <button type="submit">Enviar</button>
+    <input class="input" type="email" [(ngModel)]="email" name="email" required placeholder="Ingrese su correo" />
     <ul *ngIf="emailErrors.length > 0">
         <li *ngFor="let error of emailErrors">{{ error }}</li>
     </ul>

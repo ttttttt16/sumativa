@@ -41,9 +41,8 @@ export class SumativavisualComponent {
     this.showMessage = !this.showMessage; // Alternar el estado
   }
 
-  onToggleDarkMode() {
-    this.isDarkMode = !this.isDarkMode;
-    document.body.classList.toggle('dark-mode', this.isDarkMode); // Agregar o quitar clase dark-mode
+  toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
   }
 
 }
